@@ -1,0 +1,329 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my calculator",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hello",
+                        "how are you",
+                        "say hi world",
+                        "say hi",
+                        "hi",
+                        "say hello world",
+                        "say hello"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AddIntent",
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{firstNumber}"
+                            ]
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{secondNumber}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Add two numbers",
+                        "perform addition",
+                        "{firstNumber} plus {secondNumber}",
+                        "add {firstNumber} and {secondNumber}"
+                    ]
+                },
+                {
+                    "name": "SubtractIntent",
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{firstNumber}"
+                            ]
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{secondNumber}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Subtract two numbers",
+                        "perform subtraction ",
+                        "{secondNumber} take away {firstNumber}",
+                        "{secondNumber} minus {firstNumber}",
+                        "Subtract {firstNumber} from {secondNumber}"
+                    ]
+                },
+                {
+                    "name": "MultiplyIntent",
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "The first number was {firstNumber}",
+                                "{firstNumber}"
+                            ]
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "The second number was {secondNumber}",
+                                "{secondNumber}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "perform multiplication",
+                        "Multiply two numbers",
+                        "{firstNumber} multiplied by {secondNumber}",
+                        "What is {firstNumber} times {secondNumber}",
+                        "Multiply {firstNumber} by {secondNumber}"
+                    ]
+                },
+                {
+                    "name": "DivideIntent",
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "the first number was {firstNumber}",
+                                "{firstNumber}"
+                            ]
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "the second number was {secondNumber}",
+                                "{secondNumber}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Divide two numbers",
+                        "{firstNumber} divide {secondNumber}",
+                        "what is {firstNumber} divided by {secondNumber}",
+                        "perform division",
+                        "Divide {firstNumber} by {secondNumber}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "AddIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.246222782778.233808887018"
+                            }
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.246222782778.1064496654534"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SubtractIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.298094075420.970728675343"
+                            }
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.298094075420.452800848519"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MultiplyIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.625973433749.116033633462"
+                            }
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.625973433749.374198530920"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DivideIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "firstNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.612714661906.1268158989707"
+                            }
+                        },
+                        {
+                            "name": "secondNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.612714661906.793353141820"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.246222782778.233808887018",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the first number?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.246222782778.1064496654534",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the second number?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.298094075420.970728675343",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What was the first number?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.298094075420.452800848519",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What was the second number?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.625973433749.116033633462",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What was the first number?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.612714661906.1268158989707",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the main number?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.612714661906.793353141820",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the number you want to divide by?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.625973433749.374198530920",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the second number?"
+                    }
+                ]
+            }
+        ]
+    }
+}
